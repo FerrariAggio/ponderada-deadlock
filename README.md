@@ -60,9 +60,7 @@ também verificam V2 com uma carga de 20.000 amostras por execução.
 - `ponderada/img/`: captura de caches, captura de cada versão e diagramas analíticos.
 - `ponderada/resultados/`: saídas reais, observações, manifesto, CSV e páginas HTML
   que exibem os logs para captura no navegador, sem simular valores.
-- `ponderada/docs/enunciado.pdf`: especificação recebida.
 - `ponderada/docs/memorando-cto.pdf`: Parte B em uma página.
-- `ponderada/docs/PLANO.md`: plano e continuidade da elaboração.
 
 O utilitário opcional `python3 ponderada/codigo/gerar_apoio.py` regenera diagramas
 e páginas de evidência a partir dos logs existentes. Ele requer Pillow e fontes
