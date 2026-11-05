@@ -1,0 +1,272 @@
+{
+  "sem-forwarding": {
+    "ciclos": 17,
+    "stalls": 6,
+    "linhas": [
+      {
+        "id": 1,
+        "texto": "lw x5, 0(x10)",
+        "IF": 1,
+        "ID_inicio": 2,
+        "ID_fim": 2,
+        "EX": 3,
+        "MEM": 4,
+        "WB": 5,
+        "load": true,
+        "store": false
+      },
+      {
+        "id": 2,
+        "texto": "add x6, x6, x5",
+        "IF": 2,
+        "ID_inicio": 3,
+        "ID_fim": 5,
+        "EX": 6,
+        "MEM": 7,
+        "WB": 8,
+        "load": false,
+        "store": false
+      },
+      {
+        "id": 3,
+        "texto": "lw x7, 0(x11)",
+        "IF": 3,
+        "ID_inicio": 6,
+        "ID_fim": 6,
+        "EX": 7,
+        "MEM": 8,
+        "WB": 9,
+        "load": true,
+        "store": false
+      },
+      {
+        "id": 4,
+        "texto": "sub x6, x6, x7",
+        "IF": 6,
+        "ID_inicio": 7,
+        "ID_fim": 9,
+        "EX": 10,
+        "MEM": 11,
+        "WB": 12,
+        "load": false,
+        "store": false
+      },
+      {
+        "id": 5,
+        "texto": "sw x6, 0(x12)",
+        "IF": 7,
+        "ID_inicio": 10,
+        "ID_fim": 12,
+        "EX": 13,
+        "MEM": 14,
+        "WB": 15,
+        "load": false,
+        "store": true
+      },
+      {
+        "id": 6,
+        "texto": "addi x10, x10, 4",
+        "IF": 10,
+        "ID_inicio": 13,
+        "ID_fim": 13,
+        "EX": 14,
+        "MEM": 15,
+        "WB": 16,
+        "load": false,
+        "store": false
+      },
+      {
+        "id": 7,
+        "texto": "addi x11, x11, 4",
+        "IF": 13,
+        "ID_inicio": 14,
+        "ID_fim": 14,
+        "EX": 15,
+        "MEM": 16,
+        "WB": 17,
+        "load": false,
+        "store": false
+      }
+    ]
+  },
+  "com-forwarding": {
+    "ciclos": 13,
+    "stalls": 2,
+    "linhas": [
+      {
+        "id": 1,
+        "texto": "lw x5, 0(x10)",
+        "IF": 1,
+        "ID_inicio": 2,
+        "ID_fim": 2,
+        "EX": 3,
+        "MEM": 4,
+        "WB": 5,
+        "load": true,
+        "store": false
+      },
+      {
+        "id": 2,
+        "texto": "add x6, x6, x5",
+        "IF": 2,
+        "ID_inicio": 3,
+        "ID_fim": 4,
+        "EX": 5,
+        "MEM": 6,
+        "WB": 7,
+        "load": false,
+        "store": false
+      },
+      {
+        "id": 3,
+        "texto": "lw x7, 0(x11)",
+        "IF": 3,
+        "ID_inicio": 5,
+        "ID_fim": 5,
+        "EX": 6,
+        "MEM": 7,
+        "WB": 8,
+        "load": true,
+        "store": false
+      },
+      {
+        "id": 4,
+        "texto": "sub x6, x6, x7",
+        "IF": 5,
+        "ID_inicio": 6,
+        "ID_fim": 7,
+        "EX": 8,
+        "MEM": 9,
+        "WB": 10,
+        "load": false,
+        "store": false
+      },
+      {
+        "id": 5,
+        "texto": "sw x6, 0(x12)",
+        "IF": 6,
+        "ID_inicio": 8,
+        "ID_fim": 8,
+        "EX": 9,
+        "MEM": 10,
+        "WB": 11,
+        "load": false,
+        "store": true
+      },
+      {
+        "id": 6,
+        "texto": "addi x10, x10, 4",
+        "IF": 8,
+        "ID_inicio": 9,
+        "ID_fim": 9,
+        "EX": 10,
+        "MEM": 11,
+        "WB": 12,
+        "load": false,
+        "store": false
+      },
+      {
+        "id": 7,
+        "texto": "addi x11, x11, 4",
+        "IF": 9,
+        "ID_inicio": 10,
+        "ID_fim": 10,
+        "EX": 11,
+        "MEM": 12,
+        "WB": 13,
+        "load": false,
+        "store": false
+      }
+    ]
+  },
+  "reordenado": {
+    "ciclos": 11,
+    "stalls": 0,
+    "linhas": [
+      {
+        "id": 1,
+        "texto": "lw x5, 0(x10)",
+        "IF": 1,
+        "ID_inicio": 2,
+        "ID_fim": 2,
+        "EX": 3,
+        "MEM": 4,
+        "WB": 5,
+        "load": true,
+        "store": false
+      },
+      {
+        "id": 3,
+        "texto": "lw x7, 0(x11)",
+        "IF": 2,
+        "ID_inicio": 3,
+        "ID_fim": 3,
+        "EX": 4,
+        "MEM": 5,
+        "WB": 6,
+        "load": true,
+        "store": false
+      },
+      {
+        "id": 2,
+        "texto": "add x6, x6, x5",
+        "IF": 3,
+        "ID_inicio": 4,
+        "ID_fim": 4,
+        "EX": 5,
+        "MEM": 6,
+        "WB": 7,
+        "load": false,
+        "store": false
+      },
+      {
+        "id": 4,
+        "texto": "sub x6, x6, x7",
+        "IF": 4,
+        "ID_inicio": 5,
+        "ID_fim": 5,
+        "EX": 6,
+        "MEM": 7,
+        "WB": 8,
+        "load": false,
+        "store": false
+      },
+      {
+        "id": 5,
+        "texto": "sw x6, 0(x12)",
+        "IF": 5,
+        "ID_inicio": 6,
+        "ID_fim": 6,
+        "EX": 7,
+        "MEM": 8,
+        "WB": 9,
+        "load": false,
+        "store": true
+      },
+      {
+        "id": 6,
+        "texto": "addi x10, x10, 4",
+        "IF": 6,
+        "ID_inicio": 7,
+        "ID_fim": 7,
+        "EX": 8,
+        "MEM": 9,
+        "WB": 10,
+        "load": false,
+        "store": false
+      },
+      {
+        "id": 7,
+        "texto": "addi x11, x11, 4",
+        "IF": 7,
+        "ID_inicio": 8,
+        "ID_fim": 8,
+        "EX": 9,
+        "MEM": 10,
+        "WB": 11,
+        "load": false,
+        "store": false
+      }
+    ]
+  }
+}

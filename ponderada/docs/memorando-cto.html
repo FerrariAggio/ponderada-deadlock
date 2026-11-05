@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Memorando ao conselho da Tato</title>
+    <style>
+      /* Cores e tipografia: arquivo independente, sem fontes externas. */
+      :root {
+        --page: #eef2f6;
+        --paper: #ffffff;
+        --text: #243446;
+        --muted: #526477;
+        --accent: #245780;
+        --line: #d9e2eb;
+        --highlight: #eef5fb;
+        font-family: "Segoe UI", "Liberation Sans", Arial, sans-serif;
+        color: var(--text);
+        background: var(--page);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 48px 24px;
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      /* Folha e cabeçalho do memorando. */
+      .memo {
+        max-width: 840px;
+        margin-inline: auto;
+        padding: 44px 52px;
+        border: 1px solid var(--line);
+        border-top: 5px solid var(--accent);
+        border-radius: 8px;
+        background: var(--paper);
+        box-shadow: 0 8px 28px rgb(36 52 70 / 6%);
+      }
+
+      .memo-header {
+        margin-bottom: 28px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      h1 {
+        margin: 0 0 24px;
+        font-size: clamp(1.65rem, 4vw, 2rem);
+        line-height: 1.2;
+        letter-spacing: -0.025em;
+        text-wrap: balance;
+      }
+
+      .memo-details {
+        display: grid;
+        grid-template-columns: 72px minmax(0, 1fr);
+        gap: 6px 16px;
+        margin: 0;
+        font-size: 0.9rem;
+      }
+
+      .memo-details dt {
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .memo-details dd {
+        margin: 0;
+      }
+
+      /* Texto e destaque da decisão. */
+      p {
+        margin: 0 0 20px;
+      }
+      strong {
+        font-weight: 700;
+      }
+
+      .decision {
+        margin-bottom: 26px;
+        padding: 18px 22px;
+        border-left: 3px solid var(--accent);
+        border-radius: 0 4px 4px 0;
+        background: var(--highlight);
+      }
+
+      .decision p,
+      .memo-body > p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Telas pequenas: preservar o espaço útil para leitura. */
+      @media (max-width: 600px) {
+        body {
+          padding: 16px 12px;
+          font-size: 15px;
+        }
+        .memo {
+          padding: 28px 22px;
+        }
+        .memo-header {
+          margin-bottom: 22px;
+          padding-bottom: 20px;
+        }
+        .memo-details {
+          grid-template-columns: 58px minmax(0, 1fr);
+          gap: 8px 12px;
+        }
+        .decision {
+          padding: 16px;
+        }
+      }
+
+      /* Impressão: uma página A4, sem fundo ou sombra da tela. */
+      @page {
+        size: A4;
+        margin: 18mm 20mm;
+      }
+
+      @media print {
+        :root {
+          background: white;
+          color: #172c40;
+        }
+        body {
+          padding: 0;
+          font-size: 10.5pt;
+          line-height: 1.4;
+        }
+        .memo {
+          max-width: none;
+          padding: 5mm 0 0;
+          border: 0;
+          border-top: 2pt solid var(--accent);
+          border-radius: 0;
+          box-shadow: none;
+        }
+        .memo-header {
+          margin-bottom: 14pt;
+          padding-bottom: 12pt;
+          break-inside: avoid;
+        }
+        h1 {
+          margin-bottom: 14pt;
+          font-size: 19pt;
+        }
+        .memo-details {
+          gap: 3pt 10pt;
+          font-size: 9.5pt;
+        }
+        p {
+          margin-bottom: 12pt;
+          orphans: 3;
+          widows: 3;
+        }
+        .decision {
+          margin-bottom: 14pt;
+          padding: 8pt 12pt;
+          background: transparent;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="memo">
+      <header class="memo-header">
+        <h1>Memorando ao conselho da Tato</h1>
+        <dl class="memo-details">
+          <dt>Para:</dt>
+          <dd>Conselho da Tato</dd>
+          <dt>De:</dt>
+          <dd>Lorenzo Ferrari Aggio, CTO</dd>
+          <dt>Assunto:</dt>
+          <dd>Dilema 2 — plataforma de produção</dd>
+          <dt>Data:</dt>
+          <dd><time datetime="2026-11-05">5 de novembro de 2026</time></dd>
+        </dl>
+      </header>
+
+      <div class="memo-body">
+        <div class="decision">
+          <p>
+            <strong>Escolho a Plataforma H com DSP para a produção.</strong>
+            No modelo da A1, ela processa cada amostra em <strong>4,55 ms</strong>,
+            respeitando o limite de 5 ms com margem de 0,45 ms. A H sem DSP leva
+            8,75 ms. A V é mais rápida no processamento médio, 2,599333 ms,
+            mas chega a 5,599333 ms no cenário que inclui o atraso máximo
+            do sistema operacional.
+          </p>
+        </div>
+
+        <p>
+          O conjunto H + DSP custa <strong>R$ 37 por unidade</strong>, contra
+          R$ 70 da V. Para 2.000 unidades, são R$ 74.000 contra R$ 140.000 em
+          processador/acelerador: diferença de <strong>R$ 66.000</strong>, sem
+          incluir outros componentes, desenvolvimento ou assistência técnica.
+        </p>
+
+        <p>
+          Abrimos mão de OTA e da flexibilidade do Linux. A empresa paga mais
+          por logística de atualização e os usuários podem precisar levar a
+          pulseira à assistência. Não oferecer OTA não elimina ataques: BLE
+          continua sendo entrada externa. Exigirei validação de comandos,
+          firmware autenticado quando suportado e revisão do caminho crítico
+          para evitar que logs ou configuração interrompam a vibração.
+        </p>
+
+        <p>
+          A margem de 0,45 ms é estreita e o cálculo não é certificação de
+          tempo real. A liberação de produção depende de medir
+          <strong>sensor→vibração em até 5 ms sob a carga máxima especificada</strong>,
+          incluindo E/S, configuração e contenção. Se ultrapassar esse limite,
+          suspenderei essa liberação e reabrirei a escolha da plataforma.
+          Também reconsiderarei a V se um protótipo com solução de tempo real
+          demonstrar o mesmo limite ponta a ponta e seu custo total, incluindo
+          atualizações e assistência, justificar o acréscimo. A prioridade é
+          entregar o alerta no prazo, sem esconder o custo de manter o produto
+          seguro após a venda.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+[1105/105218.815259:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+90473 bytes written to file /home/inteli/Documents/Codex/2026-10-19/pr/outputs/ponderada-cc08/ponderada/img/a1-caches.png
+
+[1105/105219.096722:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+91975 bytes written to file /home/inteli/Documents/Codex/2026-10-19/pr/outputs/ponderada-cc08/ponderada/img/a4-v1.png
+
+[1105/105219.341926:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+90425 bytes written to file /home/inteli/Documents/Codex/2026-10-19/pr/outputs/ponderada-cc08/ponderada/img/a4-v2.png
+
+[1105/105219.580203:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+88528 bytes written to file /home/inteli/Documents/Codex/2026-10-19/pr/outputs/ponderada-cc08/ponderada/img/a4-v3.png
+
+[1105/105219.831675:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+33826 bytes written to file /home/inteli/Documents/Codex/2026-10-19/pr/outputs/ponderada-cc08/ponderada/docs/memorando-cto.pdf

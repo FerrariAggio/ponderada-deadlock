@@ -1,0 +1,13 @@
+$ /home/inteli/miniconda3/bin/python3 ponderada/codigo/versao1.py --json ponderada/resultados/v1_exec3.json
+CC08 | V1 | N=7 | amostras=20000
+Data: 2026-11-05T10:39:06.970658-03:00 | Python 3.13.12
+produzidas: 20000
+consumidas: 18328
+unicas: 18328
+perdidas: 1672
+duplicadas: 0
+invalidas: 1617
+inversoes_ordem: 303
+travou: sim | motivo: timeout_sem_amostra
+duracao_s: 2.771508
+estado_final: {"ocupados": 0, "escrita": 1, "leitura": 2, "dono_mutex": null, "esperando": {"produtor": "terminou", "consumidor": "terminou"}, "produtor_vivo": false, "consumidor_vivo": false}

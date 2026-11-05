@@ -1,0 +1,33 @@
+{
+  "versao": 3,
+  "N": 7,
+  "planejadas": 20000,
+  "timeout_s": 1.0,
+  "data": "2026-11-05T10:39:11.117221-03:00",
+  "python": "3.13.12",
+  "sistema": "Linux-7.0.0-42-generic-x86_64-with-glibc2.43",
+  "produzidas": 7,
+  "consumidas": 0,
+  "unicas": 0,
+  "perdidas": 20000,
+  "duplicadas": 0,
+  "invalidas": 0,
+  "inversoes_ordem": 0,
+  "travou": true,
+  "motivo": "timeout_sem_amostra",
+  "duracao_s": 1.117334,
+  "estado_final": {
+    "ocupados": 7,
+    "escrita": 0,
+    "leitura": 0,
+    "dono_mutex": "produtor",
+    "esperando": {
+      "produtor": "vazio",
+      "consumidor": "mutex"
+    },
+    "produtor_vivo": true,
+    "consumidor_vivo": true
+  },
+  "erros": [],
+  "observacoes": []
+}

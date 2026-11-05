@@ -1,0 +1,17 @@
+test_cli_rejeita_buffer_zero (test_experimento.TestExperimento.test_cli_rejeita_buffer_zero)
+Detecta aceitação de capacidade inválida, que levaria a divisão por zero. ... ok
+test_metricas_diferenciam_perda_duplicacao_e_leitura_invalida (test_experimento.TestExperimento.test_metricas_diferenciam_perda_duplicacao_e_leitura_invalida)
+Detecta erro ao contar IDs únicos, repetições ou entradas fora do domínio. ... ok
+test_v1_encerra_e_contabiliza_a_execucao_real (test_experimento.TestExperimento.test_v1_encerra_e_contabiliza_a_execucao_real)
+Detecta ausência de watchdog; a corrida não precisa ocorrer em todo teste. ... ok
+test_v2_preserva_fifo_apos_varias_voltas_do_buffer (test_experimento.TestExperimento.test_v2_preserva_fifo_apos_varias_voltas_do_buffer)
+Detecta índice circular errado ou sobrescrita de item ainda não consumido. ... ok
+test_v2_preserva_todos_os_ids_em_ordem_com_buffer_minimo (test_experimento.TestExperimento.test_v2_preserva_todos_os_ids_em_ordem_com_buffer_minimo)
+Detecta remoção de proteção/sinalização: N=1 deve manter FIFO completo. ... ok
+test_v3_nao_prende_o_processo_que_registra_o_resultado (test_experimento.TestExperimento.test_v3_nao_prende_o_processo_que_registra_o_resultado)
+Detecta join infinito quando as threads adquirem semáforos na ordem errada. ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.628s
+
+OK

@@ -1,0 +1,16 @@
+{
+  "data": "2026-11-05T10:39:11.173207-03:00",
+  "python": "3.13.12",
+  "executavel": "/home/inteli/miniconda3/bin/python3",
+  "sistema": "Linux-7.0.0-42-generic-x86_64-with-glibc2.43",
+  "diretorio_de_execucao": "/home/inteli/Documents/Codex/2026-10-19/pr/outputs/ponderada-cc08",
+  "hashes_sha256": {
+    "ponderada/codigo/experimento.py": "fdbf9d7539423afaa3ef5253dd817260fa8d39fbfdc3bdd1db6cbe7ae578a414",
+    "ponderada/codigo/versao1.py": "c8908c4375e194f51a14bcd46792b40a0ef39ede4edb1304e1bc3898b54cdab1",
+    "ponderada/codigo/versao2.py": "81925555b11d57bfec2ee470ba81c23ec2d8cc83223ba1f995afab44655bb39b",
+    "ponderada/codigo/versao3.py": "7cb46a1aad526a92db491d09e188da00882a44fe8e1287127500e333e6863583",
+    "ponderada/codigo/executar_experimentos.py": "1b217d222a608dacba05b97333f9a845e4fb4a8f88d1561b34810f5a332be0b2",
+    "ponderada/parametros.json": "ce3161e81788571d3c08f159c9e89e6a6add402768761ab6568f28621cb792dc"
+  },
+  "metodo": "9 subprocessos reais; 20.000 amostras; watchdog de 1 s; sem resultados simulados"
+}
